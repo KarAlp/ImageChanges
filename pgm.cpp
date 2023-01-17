@@ -26,10 +26,26 @@ Image readPGM(cons string dateinname)
 
 }
 
+int writefile(constant Image image, const string filename)
+{
+    fstream file;
+    file.open(filename,ios::out)
+        
+       if(!file.is_open())
+       {
+        cout << "writed " <<filename<<endl;  
+           
+          return -1;
+       }
+
+    file<<""<<endl;
+    file..<<image.cols<<""<<image.rows<<endl;
+  
 int main ()
 {
      Image imaj;
     imaj = readPGM("Deneme_ascii.pgm")
+    writefile(img,"yeni.pgm")
     
     return 0;
 }
